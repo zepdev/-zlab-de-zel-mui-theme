@@ -26,3 +26,7 @@ ReactDOM.render(
 
 ...
 ```
+
+## Note on use with Gatsby
+
+Until the final release of MUIv5, there are order clashes with css if you CSS-in-JS. Please reach out to alyssa.butler@zeppelin.com for a current workaround.
