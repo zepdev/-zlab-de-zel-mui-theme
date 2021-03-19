@@ -1,5 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import guidelines from "zeppelin-element-library/guidelines.json";
+import "zeppelin-element-library/bundle/zel.css";
 
 const primary = guidelines.theme.indigo.primary;
 const secondary = guidelines.theme.indigo.secondary;

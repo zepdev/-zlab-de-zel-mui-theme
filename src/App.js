@@ -27,30 +27,47 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ margin: 100 }}>
+    <div className="theme-indigo" style={{ margin: 100 }}>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        {/* <CircularProgress /> */}
-        <div>
-          <TextField id="outlined-basic" label="Outlined" />
-          <FormControl variant="outlined" style={{ minWidth: 120 }}>
-            <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
-            <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              value={age}
-              onChange={handleChange}
-              label="Age"
-              IconComponent={Arrow}
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-          </FormControl>
+        <p>Examples of Direct use of ZEL</p>
+        <button className="zep-button zep-button--primary">button</button>
+        <div style={{ marginBottom: 30 }}>
+          <input
+            class="zep-checkbox"
+            type="checkbox"
+            value=""
+            id="checkboxZep"
+          />
+          <label class="zep-checkbox__label" for="checkboxZep">
+            ZEL Checkbox
+          </label>
         </div>
+        <p>Examples of ZEL in MUI theme</p>
+        <div style={{ marginBottom: 30, width: 200 }}>
+          <TextField id="outlined-basic" label="MUI theme" />
+        </div>
+        <FormControl
+          variant="outlined"
+          style={{ width: 120, marginBottom: 30 }}
+        >
+          <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
+          <Select
+            labelId="demo-simple-select-outlined-label"
+            id="demo-simple-select-outlined"
+            value={age}
+            onChange={handleChange}
+            label="Age"
+            IconComponent={Arrow}
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+
         {Object.keys(guidelines.typography.headings.display).map((elem) => (
           <Typography variant={elem} style={{ marginBottom: 15 }}>
             {elem}
